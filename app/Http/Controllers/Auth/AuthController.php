@@ -20,7 +20,7 @@ class AuthController extends Controller
             return response()->success('user created', $user, 201);
         } catch(Exception $e) {
             report($e);
-            return response()->errorResponse('something went wrong');
+            return response()->errorResponse('something went wrong', $e);
         }
     }
 }

@@ -15,7 +15,7 @@ class UserService
     {
         $user = $this->userModel->create($data);
 
-        return array_merge($user, $this->respondWithToken($user));
+        return array_merge($user->toArray(), $this->respondWithToken($user));
     }
 
     public function respondWithToken($user = null)
@@ -25,7 +25,7 @@ class UserService
         return [
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60,
+            'expires_in' => auth('api')->factory()->getTTL() * 60,
         ];
     }
 }

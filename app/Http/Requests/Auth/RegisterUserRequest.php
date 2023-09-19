@@ -31,6 +31,7 @@ class RegisterUserRequest extends FormRequest
             'last_name' => 'string|required',
             'email' => 'email:rfc,dns|required|unique:users',
             'password' => ['string','required','confirmed',Password::defaults()],
+            'role_id' => 'string|required'
         ];
     }
 }
