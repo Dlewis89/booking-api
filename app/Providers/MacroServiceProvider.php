@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use App\Macros\ResponseMacro;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\ServiceProvider;
 
 class MacroServiceProvider extends ServiceProvider
 {

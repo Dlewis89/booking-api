@@ -8,7 +8,7 @@ class CustomException extends Exception
 {
     protected $error_source;
 
-    public function __construct(string $message = "", int $code = 0, Exception $previous = NULL, $error_source = NULL)
+    public function __construct(string $message = '', int $code = 0, Exception $previous = null, $error_source = null)
     {
         $this->error_source = $error_source;
         parent::__construct($message, $code, $previous);
